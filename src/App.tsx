@@ -12,7 +12,7 @@ import Dashboard from "./containers/Dashboard";
 import NodeView from "./containers/NodeView";
 import Transaction from "./containers/Transaction";
 import ConfigurationMenu from "./containers/ConfigurationMenu";
-import { darkTheme, lightTheme } from "./themes/binanceTheme";
+import { darkTheme, lightTheme } from "./themes/moonBeamTheme";
 import Brightness3Icon from "@material-ui/icons/Brightness3";
 import NotesIcon from "@material-ui/icons/Notes";
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';

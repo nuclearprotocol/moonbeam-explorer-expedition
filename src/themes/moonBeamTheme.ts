@@ -22,7 +22,7 @@ export const lightTheme = responsiveFontSizes(createMuiTheme({
     },
     background: {
      
-      paper: "#f3ba2f",
+      paper: "#97DFDE",
     },
   },
   overrides: {
@@ -87,60 +87,60 @@ export const darkTheme = responsiveFontSizes(createMuiTheme({
   palette: {
     type: "dark",
     primary: {
-      light: '#f3ba2f',
-      main: '#f3ba2f',
-      dark: '#000',
+      light: '#53CBC9',
+      main: '#EA5AA2',
+      dark: '#1E0E2D',
       contrastText: '#fff',
     },
     background: {
      
-      paper: "#f3ba2f",
+      paper: "#E1147B",
     },
   },
   overrides: {
     MuiAppBar: {
       root: {
-        background: "#f3ba2f",
+        background: "#EA5AA2",
       },
     },
     MuiTextField: {
       root: {      
         overflow: "visible !important",
-        color: "#f3ba2f "
+        color: "#E1147B "
       },
     },
     MuiPaper: {
       root: {
         overflow: "visible !important",
-        color: "#000"
+        color: "#EA5AA2"
       },
     },
     MuiTable: {
       root: {
-        color: "visible !important",
+        color: "#53CBC9 visible !important",
       },
     },
    MuiMenuItem : {
     root: {
-      color: "##f3ba2f  !important",
+      color: "#52CBC9  !important",
     },
    },
     MuiLink: {
       root: {
-        color: 'linear-gradient(45deg, #ffea00 30%, #f3ba2f  90%)'
+        color: 'linear-gradient(45deg, #E1147B 30%, #EA5AA2  90%)'
       },
     },
     MuiButton: {
       root: {
-        color: "#f3ba2f  !important",
+        color: "#53CBC9  !important",
       },
     },
     MuiTypography: {
       
       root: {
         
-        outlineStyle: "#666",
-        color: "#fff" ,
+        outlineStyle: "#53CBC9",
+        color: "#53CBC9" ,
       },
     },
   },

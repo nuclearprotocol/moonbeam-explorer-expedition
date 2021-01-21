@@ -1,7 +1,7 @@
 {
-  "name": "@etclabscore/expedition",
-  "version": "1.0.2",
-  "description": "Expedition is a block explorer for the Ethereum Stack",
+  "name": "@etclabscore/moonbeamexplorertestnet",
+  "version": "1.0",
+  "description": "Moonbeam Explorer is a block explorer for the Moonbeam Testnet",
   "keywords": [
     "typescript",
     "react",
@@ -13,7 +13,6 @@
   },
   "scripts": {
     "testnet": "MOONBEAM_APP_ETH_RPC_URL=https://rpc.testnet.moonbeam.network && npm start && npm run service-runner",
-    "mainnet": "MOONBEAM_APP_ETH_RPC_URL=https://bsc-dataseed4.binance.org/ npm start && npm run service-runner",
     "build": "react-scripts build && cp build/index.html build/404.html",
     "start": "react-scripts start && npm run service-runner",
     "test": "react-scripts test",

@@ -19,6 +19,7 @@ MoonBeam Explorer Testnet is a simple Block Explorer for MoonBeam Testnet/Mainet
 ![](https://i.imgur.com/RxppmId.png)
 ![](https://i.imgur.com/BOogLau.png)
 ![](https://i.imgur.com/6LJJUzZ.png)
+![](https://i.imgur.com/MvsmETc.png)
 
 
 <!-- videos-->
@@ -26,8 +27,10 @@ MoonBeam Explorer Testnet is a simple Block Explorer for MoonBeam Testnet/Mainet
 
 
 
-*Explorer Transaction using Metamask*
-https://youtu.be/e7HSMMFBuNU
+*Explorer Transaction Example using Metamask*
+
+https://youtu.be/UD0OK3uYtqA
+
 
 
 
@@ -59,13 +62,12 @@ Apache License 2.0
 
 <!-- references and additional resources  -->
 ## Resources
+
+MoonBeam Network https://moonbeam.network
 - [Ethereum JSON RPC Specification](https://github.com/etclabscore/ethereum-json-rpc-specification)
 - [Jade Service Runner](https://github.com/etclabscore/jade-service-runner)
 - [OpenRPC](https://open-rpc.org)
 - [Pristine](https://github.com/etclabscore/pristine)
 - [Expedition](https://github.com/etclabscore/expedition.git)
-
-
-
 
 

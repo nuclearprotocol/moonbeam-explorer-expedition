@@ -240,20 +240,12 @@ function App(props: any) {
                   selectedNetwork={selectedNetwork}
                 />
                 <LanguageMenu />
-                <Tooltip title={t(" API Documentation") as string}>
+                <Tooltip title={t("MoonBeam Documentation") as string}>
                   <IconButton
                     onClick={() =>
-                      window.open("https://binance-docs.github.io/apidocs/#change-log") //tslint:disable-line
+                      window.open("https://docs.moonbeam.network/") //tslint:disable-line
                     }>
                     <NotesIcon />
-                  </IconButton>
-                </Tooltip>
-                <Tooltip title={t("Binance Faucet") as string}>
-                  <IconButton
-                    onClick={() =>
-                      window.open("https://testnet.binance.org/faucet-smart")
-                    }>
-                    <MonetizationOnIcon/>
                   </IconButton>
                 </Tooltip>
                 <ConfigurationMenu onChange={handleConfigurationChange} />

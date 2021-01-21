@@ -15,60 +15,60 @@ export const lightTheme = responsiveFontSizes(createMuiTheme({
   palette: {
     type: "light",
     primary: {
-      light: '#000',
-      main: '#f3ba2f',
-      dark: '#fff',
+      light: '#53CBC9',
+      main: '#E1147B',
+      dark: '#1E0E2D',
       contrastText: '#000',
     },
     background: {
      
-      paper: "#97DFDE",
+      paper: "#3D1D5A",
     },
   },
   overrides: {
     MuiAppBar: {
       root: {
-        background: "#f3ba2f",
+        background: "#EA5AA2",
       },
     },
     MuiTextField: {
       root: {      
         overflow: "visible !important",
-        color: "#f3ba2f "
+        color: "#E1147B "
       },
     },
     MuiPaper: {
       root: {
         overflow: "visible !important",
-        color: "#000"
+        color: "#EA5AA2"
       },
     },
     MuiTable: {
       root: {
-        color: "visible !important",
+        color: "#53CBC9 visible !important",
       },
     },
    MuiMenuItem : {
     root: {
-      color: "##f3ba2f  !important",
+      color: "#52CBC9  !important",
     },
    },
     MuiLink: {
       root: {
-        color: 'linear-gradient(45deg, #ffea00 30%, #f3ba2f  90%)'
+        color: 'linear-gradient(45deg, #E1147B 30%, #EA5AA2  90%)'
       },
     },
     MuiButton: {
       root: {
-        color: "#f3ba2f  !important",
+        color: "#53CBC9  !important",
       },
     },
     MuiTypography: {
       
       root: {
         
-        outlineStyle: "#666",
-        color: "#000" ,
+        outlineStyle: "#53CBC9",
+        color: "#53CBC9" ,
       },
     },
   },

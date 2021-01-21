@@ -4,7 +4,7 @@
 <!-- about the project -->
 ## MoonBeam Explorer TestNet 
 
-MoonBeam Explorer Testnet is a simple Block Explorer for Binance Testnet/Mainet & ETH RPC extending the expedition app (https://expedition.dev).
+MoonBeam Explorer Testnet is a simple Block Explorer for MoonBeam Testnet/Mainet & ETH RPC extending the expedition app (https://expedition.dev).
 
 
 

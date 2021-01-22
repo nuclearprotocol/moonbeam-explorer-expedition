@@ -5,6 +5,7 @@ import enJSON from "./translations/en";
 import krJSON from "./translations/kr";
 import cnJSON from "./translations/cn";
 import esJSON from "./translations/es";
+import ruJSON from "./translations/ru";
 import moment from "moment";
 import "moment/locale/ko";
 import "moment/locale/zh-cn";
@@ -19,7 +20,8 @@ const momentMap: IMap = {
   "kr": "ko",
   "cn": "zh-cn",
   "en-US": "en-ca",
-  "es": "es" 
+  "es": "es",
+  "ru": "ru"
 };
 
 i18n
@@ -31,6 +33,7 @@ i18n
       kr: { translation: krJSON },
       cn: { translation: cnJSON },
       es: { translation: esJSON },
+      ru: { translation: ruJSON },
     },
     interpolation: {
       escapeValue: false,
@@ -52,14 +55,16 @@ export const reverseSupportedLanguages: IMap = {
   "EN": "en-US", //tslint:disable-line
   "中文": "cn", //tslint:disable-line
   "한국어": "kr", //tslint:disable-line
-  "ES": "es" //tslint:disable-line
+  "ES": "es", //tslint:disable-line
+  "РУС": "ru" //tslint:disable-line
 };
 
 export const supportedLanguages: IMap = {
   "en-US": "EN",
   "cn": "中文",
   "kr": "한국어",
-  "es": "ES" //tslint:disable-line
+  "es": "ES", //tslint:disable-line
+  "ru": "РУС" //tslint:disable-line
 };
 
 export const changeLanguage = (l: string) => {

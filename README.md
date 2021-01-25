@@ -17,7 +17,6 @@ Moonbeam Explorer Testnet is a simple Block Explorer for Moonbeam Testnet/Mainet
 ### Snapshots
 
 ![](https://i.imgur.com/RxppmId.png)
-![](https://i.imgur.com/BOogLau.png)
 ![](https://i.imgur.com/6LJJUzZ.png)
 ![](https://i.imgur.com/MvsmETc.png)
 

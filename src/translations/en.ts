@@ -50,4 +50,5 @@ export default {
   "Back": "Back",
   "Ethereum RPC": "Binance RPC",
   "Service Runner RPC": "Service Runner RPC",
+  "Author": "Author"
 };

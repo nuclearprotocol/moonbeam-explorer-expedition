@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/PureStake/MoonBeamExplorer"
+    "url": "https://github.com/PureStake/moonbeam-explorer-expedition"
   },
   "scripts": {
     "testnet": "MOONBEAM_APP_ETH_RPC_URL=https://rpc.testnet.moonbeam.network && npm start && npm run service-runner",

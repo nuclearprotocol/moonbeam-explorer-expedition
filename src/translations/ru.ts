@@ -48,7 +48,8 @@ export default {
     "Code": "Код",
     "Configuration": "Конфигурация",
     "Back": "Назад",
-    "Ethereum RPC": "MoonBeam RPC",
+    "Ethereum RPC": "Moonbeam RPC",
     "Service Runner RPC": "Service Runner RPC",
+    "Author": "Автор"
   };
   

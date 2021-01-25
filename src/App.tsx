@@ -199,7 +199,7 @@ function App(props: any) {
                     </Grid>
                     <Grid>
                       <Typography color="initial" variant="h6">
-                        {t("MoonBeam Explorer")}
+                        {t("Moonbeam Explorer")}
                       </Typography>
                     </Grid>
                   </Grid>
@@ -240,7 +240,7 @@ function App(props: any) {
                   selectedNetwork={selectedNetwork}
                 />
                 <LanguageMenu />
-                <Tooltip title={t("MoonBeam Documentation") as string}>
+                <Tooltip title={t("Moonbeam Documentation") as string}>
                   <IconButton
                     onClick={() =>
                       window.open("https://docs.moonbeam.network/") //tslint:disable-line

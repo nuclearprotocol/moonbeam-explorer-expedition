@@ -1,10 +1,10 @@
-# MoonBeam Expedition TestNet
+# Moonbeam Expedition TestNet
 
 
 <!-- about the project -->
 
 
-MoonBeam Explorer Testnet is a simple Block Explorer for MoonBeam Testnet/Mainet & ETH RPC extending the expedition app (https://expedition.dev).
+Moonbeam Explorer Testnet is a simple Block Explorer for Moonbeam Testnet/Mainet & ETH RPC extending the expedition app (https://expedition.dev).
 
 
 
@@ -12,7 +12,7 @@ MoonBeam Explorer Testnet is a simple Block Explorer for MoonBeam Testnet/Mainet
 **Features:**
 - Display chain id, syncing status and runtime configuration for endpoints,search by block, transaction, address, charts for hash, transaction count, gas used, uncles, latest blocks with pagination, etc.
 - Multi-language support (added Spanish).
-- MoonBeam Look and Feel (Dark and Light).
+- Moonbeam Look and Feel (Dark and Light).
 
 ### Snapshots
 
@@ -43,7 +43,7 @@ https://youtu.be/UD0OK3uYtqA
 - npm `v6.4.1` or later
 Clone/ download the project, and install dependencies.
 ```bash
-git clone  URL  && cd MoonBeamExplorer && npm install
+git clone  URL  && cd MoonbeamExplorer && npm install
 ```
 
 <!-- example usage, screen shots, demos -->
@@ -63,7 +63,7 @@ Apache License 2.0
 <!-- references and additional resources  -->
 ## Resources
 
-MoonBeam Network https://moonbeam.network
+Moonbeam Network https://moonbeam.network
 - [Ethereum JSON RPC Specification](https://github.com/etclabscore/ethereum-json-rpc-specification)
 - [Jade Service Runner](https://github.com/etclabscore/jade-service-runner)
 - [OpenRPC](https://open-rpc.org)

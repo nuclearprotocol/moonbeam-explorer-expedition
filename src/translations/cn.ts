@@ -55,6 +55,6 @@ export default {
   // configuration menu
   "Configuration": "配置",
   "Back": "返回",
-  "Ethereum RPC": "MoonBeam RPC",
+  "Ethereum RPC": "Moonbeam RPC",
   "Service Runner RPC": "Service Runner RPC",
 };

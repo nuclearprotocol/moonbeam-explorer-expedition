@@ -178,7 +178,7 @@ export default (props: any) => {
             <ChartCard title={t("Peers")}>
               <Typography variant="h4">
                 <PersonAddIcon></PersonAddIcon>{" "}
-                {hexToNumber(peerCount ? peerCount : "0")}
+                {peerCount ? peerCount : "0"}
               </Typography>
             </ChartCard>
           </Grid>

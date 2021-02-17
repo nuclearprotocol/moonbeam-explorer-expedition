@@ -1,6 +1,6 @@
 {
   "name": "@etclabscore/moonbeamexplorertestnet",
-  "version": "1.0.0",
+  "version": "1.0",
   "description": "Moonbeam Explorer is a block explorer for the Moonbeam Testnet",
   "keywords": [
     "typescript",

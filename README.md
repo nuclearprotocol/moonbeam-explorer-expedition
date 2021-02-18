@@ -72,3 +72,10 @@ Moonbeam Network https://moonbeam.network
 - [Expedition](https://github.com/etclabscore/expedition.git)
 
 
+Fix: 
+- [x] - Uncles: list in graph (remove)
+- [x]   Hash Rate: list in graph (remove)
+- [x] Slider o dropdown menu to change between Moonbase Alpha, Standalone (http://127.0.0.1:9933/) or Custom RPC (los cuales quedaron harcodeadas en las direcciones de Moonbase alpha actual y el  127.0.0.1:9933 de todas formas se puede utilizar otra rpc )
+- [x]   Time stamp relative to the last block (between parenthesis)
+- [x]  Fix the more stats page (Leave Miner by address, probably change it to Collator by address), Remove Miners by extra data, remove extra data field
+- [x] Remove the Light Theme

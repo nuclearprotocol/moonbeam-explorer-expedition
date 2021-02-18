@@ -1,7 +1,7 @@
-import { Table, TableBody, TableCell, TableHead, TableRow, Typography, LinearProgress, Tooltip } from "@material-ui/core";
+import { Table, TableBody, TableCell, TableHead, TableRow, Typography, LinearProgress } from "@material-ui/core";
 import * as React from "react";
 import Link from "@material-ui/core/Link";
-import { hexToDate, hexToNumber, hexToString } from "@etclabscore/eserialize";
+import { hexToDate, hexToNumber } from "@etclabscore/eserialize";
 import { Link as RouterLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -60,9 +60,7 @@ function BlockList({ blocks }: any) {
               }
             }
 
-            // Calculate difference of block timestamp from that of parent.
-            const timeDifferenceFromParent = (index === sortedBlocks.length - 1) ? 0 : hexToNumber(b.timestamp) - hexToNumber(sortedBlocks[index + 1].timestamp);
-
+          
             return (
               <TableRow key={b.number} style={authorHashStyle}>
                 <TableCell style={rightPaddingFix}>
@@ -75,7 +73,7 @@ function BlockList({ blocks }: any) {
                       )}>
                       {authorHashShort}
                     </Link>
-                    &nbsp;<sup>{hexToString(b.extraData).substring(0, 20)}</sup>
+                   
                   </Typography>
                 </TableCell>
                 <TableCell component="th" scope="row">
@@ -89,13 +87,10 @@ function BlockList({ blocks }: any) {
                   </Link>
                 </TableCell>
                 <TableCell style={rightPaddingFix}>
-                  <Typography>{t("Timestamp Date", { date: hexToDate(b.timestamp) })}&nbsp;<sub>({timeDifferenceFromParent > 0 ? `+${timeDifferenceFromParent}` : `-${timeDifferenceFromParent}`}s)</sub></Typography>
+                  <Typography>{t("Timestamp Date", { date: hexToDate(b.timestamp) })}</Typography>
                 </TableCell>
                 <TableCell style={rightPaddingFix}>
-                  <Tooltip title={t("Create Transactions", {count: txTypes.create}) as string} placement="top">
-                    <Typography variant="caption" color="textSecondary">{txTypes.create === 0 ? "" : txTypes.create}</Typography>
-                  </Tooltip>
-                  <Typography>{txTypes.transact}</Typography>
+                    <Typography>{txTypes.transact}</Typography>
                 </TableCell>
                 <TableCell style={rightPaddingFix}>
                   <LinearProgress value={filledPercent} variant="determinate" />

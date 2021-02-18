@@ -1,8 +1,6 @@
 import { createMuiTheme,  responsiveFontSizes  } from "@material-ui/core/styles";
 //import grey from "@material-ui/core/colors/grey";
 
-
-
 export const lightTheme = responsiveFontSizes(createMuiTheme({
   props: {
     MuiAppBar: {
@@ -13,16 +11,16 @@ export const lightTheme = responsiveFontSizes(createMuiTheme({
     },
   },
   palette: {
-    type: "light",
+    type: "dark",
     primary: {
       light: '#53CBC9',
-      main: '#E1147B',
+      main: '#EA5AA2',
       dark: '#1E0E2D',
-      contrastText: '#000',
+      contrastText: '#fff',
     },
     background: {
      
-      paper: "#3D1D5A",
+      paper: "#E1147B",
     },
   },
   overrides: {
@@ -73,6 +71,7 @@ export const lightTheme = responsiveFontSizes(createMuiTheme({
     },
   },
 }));
+
 
 
 export const darkTheme = responsiveFontSizes(createMuiTheme({
@@ -129,6 +128,13 @@ export const darkTheme = responsiveFontSizes(createMuiTheme({
       root: {
         color: 'linear-gradient(45deg, #E1147B 30%, #EA5AA2  90%)'
       },
+    },
+    MuiTouchRipple: {
+      root: {
+        color: '#53CBC9 visible !important',
+        
+      },
+      
     },
     MuiButton: {
       root: {

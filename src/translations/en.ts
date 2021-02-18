@@ -12,10 +12,10 @@ export default {
   "Gas Price": "Gas Price",
   "Network Hash Rate": "Network Hash Rate",
   "Peers": "Peers",
-  "Hash Rate": "Hash Rate",
+  "Hash Rate": "Block transactions / Block size",
   "Transaction Count": "Transaction Count",
   "Gas Usage": "Gas Usage",
-  "Uncles": "Uncles",
+  "Uncles": "Gas used / Block transactions",
   "Top Miners": "Top Miners",
   "Top Miners by extraData": "Top Miners by extraData",
   "Top Miners by Address": "Top Miners by Address",
@@ -33,7 +33,7 @@ export default {
   "Transaction Root": "Transaction Root",
   "Receipts Root": "Receipts Root",
   "Block": "Block",
-  "Gas Used": "Gas Used",
+  "Gas Used": "Gas used",
   "Cumulative Gas Used": "Cumulative Gas Used",
   "Value in Ether": "Value in Ether",
   "From": "From",
@@ -48,7 +48,7 @@ export default {
   "Code": "Code",
   "Configuration": "Configuration",
   "Back": "Back",
-  "Ethereum RPC": "Binance RPC",
-  "Service Runner RPC": "Service Runner RPC",
-  "Author": "Author"
+  "Author": "Author", 
+  "Custom RPC" : "Custom RPC",
+  
 };

@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link as RouterLink } from "react-router-dom";
 import Link from "@material-ui/core/Link";
 import TxList from "../TxList";
-import { hexToDate, hexToString, hexToNumber } from "@etclabscore/eserialize";
+import { hexToDate,  hexToNumber } from "@etclabscore/eserialize";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
@@ -20,8 +20,7 @@ function BlockView(props: any) {
   }
 
   const {
-    timestamp, hash, parentHash, miner, nonce, difficulty,
-    extraData, stateRoot, transactionsRoot, receiptsRoot, transactions,
+    timestamp, hash, parentHash, miner, nonce, difficulty, stateRoot, transactionsRoot, receiptsRoot, transactions,
     gasUsed, gasLimit, size,
   } = block;
 
@@ -116,11 +115,6 @@ function BlockView(props: any) {
           <TableRow>
             <TableCell>{t("Difficulty")}</TableCell>
             <TableCell>{hexToNumber(difficulty)}</TableCell>
-          </TableRow>
-
-          <TableRow>
-            <TableCell>{t("Extra Data")}</TableCell>
-            <TableCell>{hexToString(extraData)}</TableCell>
           </TableRow>
 
           <TableRow>

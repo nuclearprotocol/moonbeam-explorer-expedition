@@ -3,7 +3,9 @@ import { IconButton, Menu, MenuItem, ListItemText, ListItemSecondaryAction, Inpu
 import { NavigateNext, NavigateBefore } from "@material-ui/icons";
 import SettingsIcon from "@material-ui/icons/Settings";
 import { useTranslation } from "react-i18next";
-
+import Brightness2Icon from '@material-ui/icons/Brightness2';
+import Brightness3Icon from '@material-ui/icons/Brightness3';
+import Divider from '@material-ui/core/Divider';
 interface IConfigurationMenuProps {
   onChange: (type: string, url: string) => any;
 }
@@ -36,23 +38,25 @@ const PagedMenu: React.FC<IPagedMenuProps> = (props) => {
           placeholder={nameMap[selected]}
           fullWidth={true}
         />
+       
       </>
     );
   }
 
   return (
     <>
-      <MenuItem onClick={() => setSelected("service-runner")}>
-        <ListItemText>
-          {t("Service Runner RPC")}
-          </ListItemText>
-        <ListItemSecondaryAction>
-          <NavigateNext />
-        </ListItemSecondaryAction>
-      </MenuItem>
+       <Brightness2Icon/>
+      <IconButton style={{ fontSize: 14 }}onClick={(e) => props.onChange('ethereum-rpc', 'https://rpc.testnet.moonbeam.network')}>
+          {t("Moonbase Alpha")}
+      </IconButton>
+      <Divider />
+      <Brightness3Icon/>
+      <IconButton style={{ fontSize: 14 }} onClick={(e) => props.onChange('ethereum-rpc', 'http://127.0.0.1:7545')}>
+          {t("Standalone")}
+      </IconButton>
       <MenuItem onClick={() => setSelected("ethereum-rpc")}>
         <ListItemText>
-          {t("Moonbeam RPC")}
+          {t("Custom RPC")}
           </ListItemText>
         <ListItemSecondaryAction>
           <NavigateNext />

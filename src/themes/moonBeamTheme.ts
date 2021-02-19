@@ -8,6 +8,8 @@ export const lightTheme = responsiveFontSizes(createMuiTheme({
     },
     MuiCard: {
       elevation: 0,
+      
+    
     },
   },
   palette: {
@@ -35,10 +37,16 @@ export const lightTheme = responsiveFontSizes(createMuiTheme({
         color: "#E1147B "
       },
     },
+    MuiCardContent: {
+      root: {      
+        overflow: "visible !important",
+        color: "#296564 "
+      },
+    },
     MuiPaper: {
       root: {
         overflow: "visible !important",
-        color: "#EA5AA2"
+        color: "#296564 visible !important"
       },
     },
     MuiTable: {
@@ -111,7 +119,8 @@ export const darkTheme = responsiveFontSizes(createMuiTheme({
     MuiPaper: {
       root: {
         overflow: "visible !important",
-        color: "#EA5AA2"
+        color: "#EA5AA2",
+        backgroundColor : "#E1147b2",
       },
     },
     MuiTable: {

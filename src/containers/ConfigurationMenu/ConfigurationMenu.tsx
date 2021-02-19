@@ -3,8 +3,6 @@ import { IconButton, Menu, MenuItem, ListItemText, ListItemSecondaryAction, Inpu
 import { NavigateNext, NavigateBefore } from "@material-ui/icons";
 import SettingsIcon from "@material-ui/icons/Settings";
 import { useTranslation } from "react-i18next";
-import Brightness2Icon from '@material-ui/icons/Brightness2';
-import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Divider from '@material-ui/core/Divider';
 interface IConfigurationMenuProps {
   onChange: (type: string, url: string) => any;

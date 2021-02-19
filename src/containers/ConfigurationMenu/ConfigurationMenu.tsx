@@ -51,7 +51,7 @@ const PagedMenu: React.FC<IPagedMenuProps> = (props) => {
       </IconButton>
       <Divider />
       <Brightness3Icon/>
-      <IconButton style={{ fontSize: 14 }} onClick={(e) => props.onChange('ethereum-rpc', 'http://127.0.0.1:7545')}>
+      <IconButton style={{ fontSize: 14 }} onClick={(e) => props.onChange('ethereum-rpc', 'http://127.0.0.1:9933')}>
           {t("Standalone")}
       </IconButton>
       <MenuItem onClick={() => setSelected("ethereum-rpc")}>

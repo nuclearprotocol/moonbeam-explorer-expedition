@@ -12,10 +12,10 @@ export default {
     "Gas Price": "Цена на газ",
     "Network Hash Rate": "Скорость Хэширования Сети",
     "Peers": "Узлы",
-    "Hash Rate": "Скорость Хэширования",
+    "Hash Rate": "Block transactions / Block size",
     "Transaction Count": "Количество Транзакций",
     "Gas Usage": "Использованный Газ",
-    "Uncles": "Анклы",
+    "Uncles": "Gas used / Block transactions",
     "Top Miners": "Топ Майнеры",
     "Top Miners by extraData": "Топ Майнеры по экстраДате",
     "Top Miners by Address": "Топ Майнеры по Адресу",
@@ -48,8 +48,7 @@ export default {
     "Code": "Код",
     "Configuration": "Конфигурация",
     "Back": "Назад",
-    "Ethereum RPC": "Moonbeam RPC",
-    "Service Runner RPC": "Service Runner RPC",
-    "Author": "Автор"
+    "Author": "Автор",
+    "Custom RPC" : "Custom RPC",
   };
   

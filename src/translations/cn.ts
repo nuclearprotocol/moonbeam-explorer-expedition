@@ -14,10 +14,10 @@ export default {
   "Gas Price": "Gas 费用",
   "Network Hash Rate": "算力",
   "Peers": "端点",
-  "Hash Rate": "Hash Rate",
+  "Hash Rate": "Block transactions / Block size",
   "Transaction Count": "Transaction Count",
   "Gas Usage": "Gas Usage",
-  "Uncles": "Uncles",
+  "Uncles": "Gas used / Block transactions",
   "Top Miners": "Top Miners",
   "Top Miners by extraData": "Top Miners by extraData",
   "Top Miners by Address": "Top Miners by Address",
@@ -55,6 +55,5 @@ export default {
   // configuration menu
   "Configuration": "配置",
   "Back": "返回",
-  "Ethereum RPC": "Moonbeam RPC",
-  "Service Runner RPC": "Service Runner RPC",
+  "Custom RPC" : "Custom RPC",
 };

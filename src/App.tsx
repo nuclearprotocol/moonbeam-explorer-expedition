@@ -13,10 +13,7 @@ import NodeView from "./containers/NodeView";
 import Transaction from "./containers/Transaction";
 import ConfigurationMenu from "./containers/ConfigurationMenu";
 import { darkTheme, lightTheme } from "./themes/moonBeamTheme";
-import Brightness3Icon from "@material-ui/icons/Brightness3";
 import NotesIcon from "@material-ui/icons/Notes";
-//import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
-import WbSunnyIcon from "@material-ui/icons/WbSunny";
 
 import ServiceRunner, { ObjectOfStringDoaGddGAStringVp8AIgHFStringDoaGddGAUnorderedSetOfObjectOfStringDoaGddGAStringDoaGddGAKieCSt44UIuKSje3YY1BLmC3 as IAvailableServices } from "@etclabscore/jade-service-runner-client"; //tslint:disable-line
 import availableServiceToNetwork from "./helpers/availableServiceToNetwork";
@@ -249,11 +246,7 @@ function App(props: any) {
                   </IconButton>
                 </Tooltip>
                 <ConfigurationMenu onChange={handleConfigurationChange} />
-                <Tooltip title={t("Toggle Dark Mode") as string}>
-                  <IconButton onClick={darkMode.toggle}>
-                    {darkMode.value ? <Brightness3Icon /> : <WbSunnyIcon />}
-                  </IconButton>
-                </Tooltip>
+              
               </Grid>
             </Grid>
           </Toolbar>

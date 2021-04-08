@@ -14,10 +14,10 @@ export default {
   "Gas Price": "Gas 비용",
   "Network Hash Rate": "해시파워",
   "Peers": "거점",
-  "Hash Rate": "Hash Rate",
+  "Hash Rate": "Block transactions / Block size",
   "Transaction Count": "Transaction Count",
   "Gas Usage": "Gas Usage",
-  "Uncles": "Uncles",
+  "Uncles": "Gas used / Block transactions",
   "Top Miners": "Top Miners",
   "Top Miners by extraData": "Top Miners by extraData",
   "Top Miners by Address": "Top Miners by Address",
@@ -55,6 +55,5 @@ export default {
   // configuration menu
   "Configuration": "구성",
   "Back": "뒤로",
-  "Ethereum RPC": "Ethereum RPC",
-  "Service Runner RPC": "Service Runner RPC",
+  "Custom RPC" : "Custom RPC",
 };

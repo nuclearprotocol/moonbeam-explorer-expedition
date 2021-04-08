@@ -1,9 +1,23 @@
-import { AppBar, CssBaseline, Toolbar, Typography, IconButton, Grid, InputBase, Tooltip } from "@material-ui/core";
+import {
+  AppBar,
+  CssBaseline,
+  Toolbar,
+  Typography,
+  IconButton,
+  Grid,
+  InputBase,
+  Tooltip,
+} from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
 import Link from "@material-ui/core/Link";
-import React, { Dispatch, ChangeEvent, KeyboardEvent, useState, useEffect } from "react";
+import React, {
+  Dispatch,
+  ChangeEvent,
+  KeyboardEvent,
+  useState,
+  useEffect,
+} from "react";
 import { Link as RouterLink, Router, Route, Switch } from "react-router-dom";
-import useDarkMode from "use-dark-mode";
 import "./App.css";
 
 import Address from "./containers/Address";
@@ -12,10 +26,12 @@ import Dashboard from "./containers/Dashboard";
 import NodeView from "./containers/NodeView";
 import Transaction from "./containers/Transaction";
 import ConfigurationMenu from "./containers/ConfigurationMenu";
-import { darkTheme, lightTheme } from "./themes/moonBeamTheme";
+import { darkTheme } from "./themes/moonBeamTheme";
 import NotesIcon from "@material-ui/icons/Notes";
 
-import ServiceRunner, { ObjectOfStringDoaGddGAStringVp8AIgHFStringDoaGddGAUnorderedSetOfObjectOfStringDoaGddGAStringDoaGddGAKieCSt44UIuKSje3YY1BLmC3 as IAvailableServices } from "@etclabscore/jade-service-runner-client"; //tslint:disable-line
+import ServiceRunner, {
+  ObjectOfStringDoaGddGAStringVp8AIgHFStringDoaGddGAUnorderedSetOfObjectOfStringDoaGddGAStringDoaGddGAKieCSt44UIuKSje3YY1BLmC3 as IAvailableServices,
+} from "@etclabscore/jade-service-runner-client"; //tslint:disable-line
 import availableServiceToNetwork from "./helpers/availableServiceToNetwork";
 
 import useInterval from "use-interval";
@@ -27,24 +43,43 @@ import { useTranslation } from "react-i18next";
 import LanguageMenu from "./containers/LanguageMenu";
 import { createBrowserHistory } from "history";
 import NetworkDropdown from "./components/NetworkDropdown/NetworkDropdown";
-import { StringParam, QueryParamProvider, useQueryParams } from "use-query-params";
+import {
+  StringParam,
+  QueryParamProvider,
+  useQueryParams,
+} from "use-query-params";
 import { createPreserveQueryHistory } from "./helpers/createPreserveHistory";
 import BlockRawContainer from "./containers/BlockRawContainer";
 import TransactionRawContainer from "./containers/TransactionRawContainer";
 import expeditionLogo from "./explorer.png";
 import MinerStatsPage from "./containers/MinerStatsPage";
 
-const history = createPreserveQueryHistory(createBrowserHistory, ["network", "rpcUrl"])();
+const history = createPreserveQueryHistory(createBrowserHistory, [
+  "network",
+  "rpcUrl",
+])();
 
 function App(props: any) {
   const { t } = useTranslation();
-  const darkMode = useDarkMode();
   const [search, setSearch] = useState();
-  const theme = darkMode.value ? darkTheme : lightTheme;
+  const theme = darkTheme;
 
   const [selectedNetwork, setSelectedNetworkState] = useState();
-  const [serviceRunner, serviceRunnerUrl, setServiceRunnerUrl, availableServices]: [ServiceRunner, string, any, IAvailableServices[]] = useServiceRunnerStore(); //tslint:disable-line
-  const [erpc, setCoreGethUrlOverride]: [EthereumJSONRPC, Dispatch<string>] = useCoreGethStore();
+  const [
+    serviceRunner,
+    serviceRunnerUrl,
+    setServiceRunnerUrl,
+    availableServices,
+  ]: [
+    ServiceRunner,
+    string,
+    any,
+    IAvailableServices[]
+  ] = useServiceRunnerStore(); //tslint:disable-line
+  const [erpc, setCoreGethUrlOverride]: [
+    EthereumJSONRPC,
+    Dispatch<string>
+  ] = useCoreGethStore();
   const [networks, setNetworks] = useState<any[]>([]);
 
   const [query, setQuery] = useQueryParams({
@@ -55,8 +90,15 @@ function App(props: any) {
   const setSelectedNetwork = async (network: any) => {
     setSelectedNetworkState(network);
     if (network.service) {
-      await serviceRunner.installService(network.service.name, network.service.version);
-      await serviceRunner.startService(network.service.name, network.service.version, network.name);
+      await serviceRunner.installService(
+        network.service.name,
+        network.service.version
+      );
+      await serviceRunner.startService(
+        network.service.name,
+        network.service.version,
+        network.name
+      );
     }
     setCoreGethUrlOverride(network.url);
   };
@@ -81,7 +123,7 @@ function App(props: any) {
     } else {
       setSelectedNetworkState(networks[0]);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [networks, query.network]);
 
   useEffect(() => {
@@ -97,7 +139,7 @@ function App(props: any) {
         search: `?network=${name}`,
       });
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedNetwork, setQuery]);
 
   const handleConfigurationChange = (type: string, url: string) => {
@@ -114,12 +156,16 @@ function App(props: any) {
     }
   }, [erpc]);
 
-  useInterval(() => {
-    if (erpc) {
-      erpc.stopBatch();
-      erpc.startBatch();
-    }
-  }, 100, true);
+  useInterval(
+    () => {
+      if (erpc) {
+        erpc.stopBatch();
+        erpc.startBatch();
+      }
+    },
+    100,
+    true
+  );
 
   const isAddress = (q: string): boolean => {
     const re = new RegExp(ETHJSONSpec.components.schemas.Address.pattern);
@@ -137,7 +183,9 @@ function App(props: any) {
   };
 
   const handleSearch = async (qry: string | undefined) => {
-    if (qry === undefined) { return; }
+    if (qry === undefined) {
+      return;
+    }
     const q = qry.trim();
     if (isAddress(q)) {
       history.push(`/address/${q}`);
@@ -165,7 +213,10 @@ function App(props: any) {
       }
     }
     if (isBlockNumber(q)) {
-      const block = await erpc.eth_getBlockByNumber(`0x${parseInt(q, 10).toString(16)}`, false);
+      const block = await erpc.eth_getBlockByNumber(
+        `0x${parseInt(q, 10).toString(16)}`,
+        false
+      );
       if (block) {
         history.push(`/block/${block.hash}`);
       }
@@ -177,14 +228,26 @@ function App(props: any) {
       <ThemeProvider theme={theme}>
         <AppBar position="sticky" color="default" elevation={0}>
           <Toolbar>
-            <Grid justify="space-between" alignItems="center" alignContent="center" container>
+            <Grid
+              justify="space-between"
+              alignItems="center"
+              alignContent="center"
+              container
+            >
               <Grid item style={{ marginTop: "8px" }}>
                 <Link
-                  component={({ className, children }: { children: any, className: string }) => (
+                  component={({
+                    className,
+                    children,
+                  }: {
+                    children: any;
+                    className: string;
+                  }) => (
                     <RouterLink className={className} to={"/"}>
                       {children}
                     </RouterLink>
-                  )}>
+                  )}
+                >
                   <Grid container>
                     <Grid>
                       <img
@@ -204,24 +267,21 @@ function App(props: any) {
               </Grid>
               <Grid item md={6} xs={12}>
                 <InputBase
-                  placeholder={t("Enter an Address, Transaction Hash or Block Number")}
-                  onKeyDown={
-                    (event: KeyboardEvent<HTMLInputElement>) => {
-                      if (event.keyCode === 13) {
-                        handleSearch(search);
-                      }
+                  placeholder={t(
+                    "Enter an Address, Transaction Hash or Block Number"
+                  )}
+                  onKeyDown={(event: KeyboardEvent<HTMLInputElement>) => {
+                    if (event.keyCode === 13) {
+                      handleSearch(search);
                     }
-                  }
-                  onChange={
-                    (event: ChangeEvent<HTMLInputElement>) => {
-                      if (event.target.value) {
-                        const {value} = event.target;
-                        setSearch(value as any);
-                      }
+                  }}
+                  onChange={(event: ChangeEvent<HTMLInputElement>) => {
+                    if (event.target.value) {
+                      const { value } = event.target;
+                      setSearch(value as any);
                     }
-                  }
+                  }}
                   fullWidth
-          
                   style={{
                     background: "rgba(6,6,6,0.1)",
                     borderRadius: "4px",
@@ -239,14 +299,14 @@ function App(props: any) {
                 <LanguageMenu />
                 <Tooltip title={t("Moonbeam Documentation") as string}>
                   <IconButton
-                    onClick={() =>
-                      window.open("https://docs.moonbeam.network/") //tslint:disable-line
-                    }>
+                    onClick={
+                      () => window.open("https://docs.moonbeam.network/") //tslint:disable-line
+                    }
+                  >
                     <NotesIcon />
                   </IconButton>
                 </Tooltip>
                 <ConfigurationMenu onChange={handleConfigurationChange} />
-              
               </Grid>
             </Grid>
           </Toolbar>
@@ -256,21 +316,27 @@ function App(props: any) {
             <CssBaseline />
             <Switch>
               <Route path={"/"} component={Dashboard} exact={true} />
-              <Route path={"/stats/miners"} component={MinerStatsPage} exact={true} />
+              <Route
+                path={"/stats/miners"}
+                component={MinerStatsPage}
+                exact={true}
+              />
               <Route path={"/stats/miners/:block"} component={MinerStatsPage} />
               <Route path={"/block/:hash/raw"} component={BlockRawContainer} />
               <Route path={"/block/:hash"} component={Block} />
               <Route path={"/blocks/:number"} component={NodeView} />
-              <Route path={"/tx/:hash/raw"} component={TransactionRawContainer} />
+              <Route
+                path={"/tx/:hash/raw"}
+                component={TransactionRawContainer}
+              />
               <Route path={"/tx/:hash"} component={Transaction} />
               <Route path={"/address/:address/:block"} component={Address} />
               <Route path={"/address/:address"} component={Address} />
             </Switch>
           </QueryParamProvider>
-        </div>  
-      
-      </ThemeProvider >
-    </Router >
+        </div>
+      </ThemeProvider>
+    </Router>
   );
 }
 

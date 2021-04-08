@@ -28,7 +28,6 @@ function BlockList({ blocks }: any) {
             <TableCell><Typography>{t("#Txs")}</Typography></TableCell>
             <TableCell><Typography>{t("Gas Usage")}</Typography></TableCell>
             <TableCell><Typography>{t("Gas Limit")}</Typography></TableCell>
-            <TableCell><Typography>{t("Uncles")}</Typography></TableCell>
             <TableCell><Typography>{t("Hash")}</Typography></TableCell>
           </TableRow>
         </TableHead>
@@ -97,9 +96,6 @@ function BlockList({ blocks }: any) {
                 </TableCell>
                 <TableCell>
                   <Typography>{hexToNumber(b.gasLimit)}</Typography>
-                </TableCell>
-                <TableCell>
-                  <Typography>{b.uncles.length === 0 ? "" : b.uncles.length}</Typography>
                 </TableCell>
                 <TableCell style={rightPaddingFix}>
                   <Link

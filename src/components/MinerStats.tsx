@@ -6,9 +6,9 @@ import CustomPieChartLabel from "./CustomPieChartLabel";
 import { useTranslation } from "react-i18next";
 import _ from "lodash";
 
-
 const blockTopMinerCountByAddress = (blocks: any[]) => {
-  const result = _(blocks).chain()
+  const result = _(blocks)
+    .chain()
     .countBy((b: any) => b.miner)
     .map((key: string, val: number) => ({
       x: val,
@@ -26,16 +26,11 @@ interface IProps {
   config: any;
 }
 
-
-
-const MinerStats: React.FC<IProps> = ({blocks}) => {
+const MinerStats: React.FC<IProps> = ({ blocks }) => {
   const [showDefaultPieHover, setShowDefaultPieHover] = useState(true);
   const { t } = useTranslation();
-  const colors = [
-    "#e1147B",
-    "#53CBC9",
-    "#f6d731"];
-  
+  const colors = ["#FFACFC", "#F148FB", "#7122FA", "#560A86"];
+
   return (
     <Grid container justify="space-evenly">
       <Grid key="uncles" item xs={12} md={4} lg={4}>
@@ -45,28 +40,36 @@ const MinerStats: React.FC<IProps> = ({blocks}) => {
             // innerRadius={50}
             colorScale={colors}
             data={blockTopMinerCountByAddress(blocks)}
-            events={[{
-              target: "data",
-              eventHandlers: {
-                onMouseOver: () => {
-                  return [{
-                    target: "labels",
-                    mutation: () => {
-                      setShowDefaultPieHover(false);
-                      return { active: true };
-                    },
-                  }];
+            events={[
+              {
+                target: "data",
+                eventHandlers: {
+                  onMouseOver: () => {
+                    return [
+                      {
+                        target: "labels",
+                        mutation: () => {
+                          setShowDefaultPieHover(false);
+                          return { active: true };
+                        },
+                      },
+                    ];
+                  },
                 },
               },
-            }]}
-            labelComponent={<CustomPieChartLabel {...{
-              defaultActive: showDefaultPieHover ? blockTopMinerCountByAddress(blocks)[0] : undefined,
-            }} />}
-          >
-          </VictoryPie>
+            ]}
+            labelComponent={
+              <CustomPieChartLabel
+                {...{
+                  defaultActive: showDefaultPieHover
+                    ? blockTopMinerCountByAddress(blocks)[0]
+                    : undefined,
+                }}
+              />
+            }
+          ></VictoryPie>
         </ChartCard>
       </Grid>
-      
     </Grid>
   );
 };

@@ -51,22 +51,20 @@ const PagedMenu: React.FC<IPagedMenuProps> = (props) => {
 
   return (
     <>
-      <IconButton
-        style={{ fontSize: 14 }}
+      <MenuItem
+        onClick={(e) => props.onChange("ethereum-rpc", "http://localhost:9933")}
+      >
+        <ListItemText>{t("Development Node")}</ListItemText>
+      </MenuItem>
+      <Divider />
+      <MenuItem
         onClick={(e) =>
           props.onChange("ethereum-rpc", "https://rpc.testnet.moonbeam.network")
         }
       >
-        {t("Moonbase Alpha")}
-      </IconButton>
+        <ListItemText>{t("Moonbase Alpha")}</ListItemText>
+      </MenuItem>
       <Divider />
-
-      <IconButton
-        style={{ fontSize: 14 }}
-        onClick={(e) => props.onChange("ethereum-rpc", "http://localhost:9933")}
-      >
-        {t("Standalone")}
-      </IconButton>
       <MenuItem onClick={() => setSelected("ethereum-rpc")}>
         <ListItemText>{t("Custom RPC")}</ListItemText>
         <ListItemSecondaryAction>

@@ -259,7 +259,7 @@ function App(props: any) {
                     </Grid>
                     <Grid>
                       <Typography color="initial" variant="h6">
-                        {t("Moonbeam Explorer")}
+                        {t("Moonbeam Basic Explorer")}
                       </Typography>
                     </Grid>
                   </Grid>

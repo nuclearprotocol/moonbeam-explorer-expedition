@@ -3,7 +3,7 @@ import JadeServiceRunner from "@etclabscore/jade-service-runner-client";
 import React, { useState, Dispatch } from "react";
 
 const serviceName = "core-geth";
-const MOONBEAM_APP_ETH_RPC_URL = "https://rpc.testnet.moonbeam.network";
+const MOONBEAM_APP_ETH_RPC_URL = "https://rpc.moonriver.moonbeam.network";
 
 function useCoreGeth(
   serviceRunner: JadeServiceRunner | undefined,

@@ -44,7 +44,7 @@ const MinerStatsTable: React.FC<IProps> = ({ blocks }) => {
     <Table aria-label="simple table">
       <TableHead >
         <TableRow>
-          <TableCell>Blocks Mined</TableCell>
+          <TableCell>Blocks Produced</TableCell>
           <TableCell>Address</TableCell>
           <TableCell>ExtraData</TableCell>
           <TableCell>Blocks</TableCell>

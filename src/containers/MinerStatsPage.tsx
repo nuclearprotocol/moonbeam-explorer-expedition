@@ -37,7 +37,7 @@ export default (props: IProps) => {
   const victoryTheme = getTheme(theme);
   const { block } = props.match.params;
   const blockNum = block !== undefined ? parseInt(block, 10) : blockNumber;
-  const from = Math.max(blockNum - 99, 0);
+  const from = Math.max(blockNum - 599, 0);
   const to = blockNum;
 
   React.useEffect(() => {
